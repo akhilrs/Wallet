@@ -2,7 +2,7 @@ language: python
 python:
   - 3.4
 install:
-  - pip install -r requirements.txt
+  - pip install -r app/requirements.txt
   - pip install coveralls
 
 services:
@@ -13,7 +13,7 @@ before_script:
   - mongo mydb_test --eval 'db.addUser("travis", "test");'
 
 script:
-  coverage run --source=moscowdjango,meetup manage.py test
+  coverage run --source=moscowdjango,meetup app/manage.py test
 
 after_success:
   coveralls
