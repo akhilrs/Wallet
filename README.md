@@ -1,1 +1,1 @@
-[](``)
+[![Coverage Status](https://coveralls.io/repos/github/akhilrs/Wallet/badge.svg?branch=master)](https://coveralls.io/github/akhilrs/Wallet?branch=master)

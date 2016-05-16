@@ -1,0 +1,29 @@
+language: python
+python:
+  - 3.4
+install:
+  - pip install -r requirements.txt
+  - pip install coveralls
+
+services:
+  - mongodb
+
+before_script:
+  - sleep 15
+  - mongo mydb_test --eval 'db.addUser("travis", "test");'
+
+script:
+  coverage run --source=moscowdjango,meetup manage.py test
+
+after_success:
+  coveralls
+# Whitelisting example
+branches:
+  only:
+    - master
+
+# Blacklisting example
+branches:
+  except:
+    - develop
+    - feature
