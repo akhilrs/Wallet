@@ -1,5 +1,6 @@
 **/*.pyc
 *.pyc
+*.log
 # Node modules
 node_modules/
 dist/
