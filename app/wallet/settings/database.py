@@ -22,7 +22,7 @@ MONGODB_DATABASES = {
         "host": os.environ.get('MASTER_DB_HOST'),
         "password": os.environ.get('MASTER_DB_PASSWORD'),
         "username": os.environ.get('MASTER_DB_USER'),
-        "tz_aware": True, # if you using timezones in django (USE_TZ = True)
+        "tz_aware": True,  # if you using timezones in django (USE_TZ = True)
     },
 }
 # }
