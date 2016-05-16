@@ -1,1 +1,1 @@
-[![Coverage Status](https://coveralls.io/repos/github/akhilrs/Wallet/badge.svg?branch=master)](https://coveralls.io/github/akhilrs/Wallet?branch=master)
+[![Build Status](https://travis-ci.org/akhilrs/Wallet.svg?branch=master)](https://travis-ci.org/akhilrs/Wallet) [![Coverage Status](https://coveralls.io/repos/github/akhilrs/Wallet/badge.svg?branch=master)](https://coveralls.io/github/akhilrs/Wallet?branch=master)
