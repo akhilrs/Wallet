@@ -1,0 +1,17 @@
+**/*.pyc
+*.pyc
+# Node modules
+node_modules/
+dist/
+build/
+npm-debug.log
+debug.log
+*~
+
+.project
+.pydevproject
+.idea
+nbproject
+image_not_found.jpg
+**/**/.sonar/
+app/webapp/sonar-project.properties
