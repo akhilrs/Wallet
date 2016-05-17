@@ -19,6 +19,7 @@ script:
 
 after_success:
   coveralls
+  codeclimate-test-reporter
 # Whitelisting example
 branches:
   only:
@@ -29,3 +30,7 @@ branches:
   except:
     - develop
     - feature
+
+addons:
+  code_climate:
+    repo_token: 26e4c110f3f6636057d6d9940f4e7a6de21a0680f5375977d17e821e50b1c615
