@@ -11,10 +11,11 @@ DJANGO_APPS = (
 
 THIRD_PARTY_APPS = (
     'mongonaut',
+    'channels',
 )
 
 LOCAL_APPS = (
-
+    'wallet.chat',
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

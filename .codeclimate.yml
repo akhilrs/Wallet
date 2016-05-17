@@ -19,9 +19,9 @@ engines:
         - javascript
 ratings:
   paths:
-  - app/**
-  - lib/**
-  - "**.py"
+    - app/**
+    - lib/**
+    - "**.py"
 exclude_paths:
   - spec/**/*
   - "**/vendor/**/*"
