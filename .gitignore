@@ -1,6 +1,7 @@
 **/*.pyc
 *.pyc
 *.log
+.coverage
 # Node modules
 node_modules/
 dist/
