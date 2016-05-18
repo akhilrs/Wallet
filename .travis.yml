@@ -15,7 +15,7 @@ before_script:
   - mongo mydb_test --eval 'db.addUser("travis", "test");'
 
 script:
-  coverage run --source=moscowdjango,meetup app/manage.py test
+  coverage run --source=app/manage.py test
 
 after_success:
   coveralls
