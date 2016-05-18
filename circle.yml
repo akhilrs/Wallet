@@ -5,7 +5,7 @@ machine:
 
   # Version of ruby to use
   python:
-    version: pypy-2.7
+    version: pypy-2.7.9
 
 #  # Override /etc/hosts
 #  hosts:
