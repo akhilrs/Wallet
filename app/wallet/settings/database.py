@@ -2,16 +2,16 @@ import os
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django_mongodb_engine',
-#         'NAME': os.environ.get('MASTER_DB'),
-#         'USER': os.environ.get('MASTER_DB_USER'),
-#         'PASSWORD': os.environ.get('MASTER_DB_PASSWORD'),
-#         'HOST': os.environ.get('MASTER_DB_HOST'),
-#         'PORT': os.environ.get('MASTER_DB_PORT')
-#     }
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get('MASTER_DB'),
+        'USER': os.environ.get('MASTER_DB_USER'),
+        'PASSWORD': os.environ.get('MASTER_DB_PASSWORD'),
+        'HOST': os.environ.get('MASTER_DB_HOST'),
+        'PORT': os.environ.get('MASTER_DB_PORT')
+    }
+}
 # mongodb connection
 from mongoengine import connect
 connect('wallet')
