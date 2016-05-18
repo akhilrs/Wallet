@@ -17,12 +17,12 @@ before_script:
 
 script:
   tox
-  coverage run py.test
+  # coverage run py.test
   # coverage run --source=moscowdjango,meetup app/manage.py test
 
 after_success:
-  coveralls
-  codeclimate-test-reporter
+  - coveralls
+  - codeclimate-test-reporter
 # Whitelisting example
 branches:
   only:
