@@ -1,9 +1,12 @@
 language: python
 python:
+  - 2.7
   - 3.4
 install:
   - pip install -r app/requirements.txt
+  - pip install -r app/requirements/require-dev.txt
   - pip install coveralls
+  - pip install tox-travis
 
 services:
   - mongodb
@@ -13,10 +16,13 @@ before_script:
   - mongo mydb_test --eval 'db.addUser("travis", "test");'
 
 script:
-  coverage run --source=moscowdjango,meetup app/manage.py test
+  tox
+  # coverage run py.test
+  # coverage run --source=moscowdjango,meetup app/manage.py test
 
 after_success:
-  coveralls
+  - coveralls
+  - codeclimate-test-reporter
 # Whitelisting example
 branches:
   only:
@@ -27,3 +33,7 @@ branches:
   except:
     - develop
     - feature
+
+addons:
+  code_climate:
+    repo_token: 26e4c110f3f6636057d6d9940f4e7a6de21a0680f5375977d17e821e50b1c615
