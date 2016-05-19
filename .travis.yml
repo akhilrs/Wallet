@@ -23,6 +23,7 @@ script:
 after_success:
   - coveralls
   - codeclimate-test-reporter
+  - bash <(curl -s https://codecov.io/bash)
 # Whitelisting example
 branches:
   only:
