@@ -5,7 +5,7 @@ machine:
 
   # Version of ruby to use
   python:
-    version: pypy-2.7.9
+    version: pypy-2.2.1
 
 #  # Override /etc/hosts
 #  hosts:
@@ -26,7 +26,7 @@ machine:
 ## Customize dependencies
 dependencies:
   pre:
-    - sudo apt install libpq-dev python-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev
+    - sudo apt-get install libpq-dev python-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev
 
 #  override:
 #    - bundle install: # note ':' here
