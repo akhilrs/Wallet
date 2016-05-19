@@ -1,7 +1,7 @@
 # Use django.test.TestCase here so I get the snazzy Django assertions.
 
 from django.test import TestCase
-from chat.models import Room, Message
+from wallet.chat.models import Room, Message
 
 
 class ViewTests(TestCase):

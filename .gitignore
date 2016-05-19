@@ -2,6 +2,8 @@
 *.pyc
 *.log
 .coverage
+app/htmlcov
+**/**/.cache
 # Node modules
 node_modules/
 dist/
@@ -9,7 +11,8 @@ build/
 npm-debug.log
 debug.log
 *~
-
+app/assets/static/*
+app/assets/media
 .project
 .pydevproject
 .idea

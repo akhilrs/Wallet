@@ -7,8 +7,8 @@ from channels.handler import AsgiRequest
 from channels.message import Message
 from django.contrib.sessions.backends.file import SessionStore as FileSessionStore
 
-from chat.consumers import ws_connect, ws_receive, ws_disconnect
-from chat.models import Room
+from wallet.chat.consumers import ws_connect, ws_receive, ws_disconnect
+from wallet.chat.models import Room
 
 
 @pytest.fixture
