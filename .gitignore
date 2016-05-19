@@ -2,6 +2,8 @@
 *.pyc
 *.log
 .coverage
+app/htmlcov
+**/**/.cache
 # Node modules
 node_modules/
 dist/
