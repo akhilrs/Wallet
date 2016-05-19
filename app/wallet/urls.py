@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    (r'^mongonaut/', include('mongonaut.urls')),
+    url(r'^mongonaut/', include('mongonaut.urls')),
+    url(r'^api/chat/', include('wallet.chat.urls')),
 ]
