@@ -1,7 +1,26 @@
 from __future__ import unicode_literals
-
+from django.utils.translation import ugettext_lazy as _
+import uuid
 from django.db import models
 from django.utils import timezone
+
+
+class ChatInvite(models.Model):
+    CHOICES = (
+        ('pending', 'Pending'),
+        ('accepted', 'Accepted'),
+        ('rejected', 'Rejected'),
+        ('blocked', 'Blocked')
+    )
+    sender_id = models.IntegerField(verbose_name=_(u'Sender ID'), blank=False, null=False, default=0)
+    recipient_id = models.IntegerField(verbose_name=_(u'Recipient ID'), blank=False, null=False, default=0)
+    invite_id = models.UUIDField(verbose_name=_(u'Chat Invitation ID'), primary_key=True, blank=False, null=False,
+                                 default=uuid.uuid4, editable=False)
+    created_at = models.DateTimeField(verbose_name=_(u'Invited date'), auto_now_add=True)
+    updated_at = models.DateTimeField(verbose_name=_(u'Updated date'), auto_now_add=True)
+    status = models.CharField(default='pending', choices=CHOICES, max_length=10)
+
+
 
 class Room(models.Model):
     name = models.TextField()
