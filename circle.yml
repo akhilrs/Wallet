@@ -48,9 +48,10 @@ dependencies:
 ## Customize test commands
 test:
   override:
-    - coverage run py.test
+    - py.test --cov=wallet --cov-report=term --cov-report=html
+    # - coverage run py.test
   post:
-    - coverage html -d $CIRCLE_ARTIFACTS
+    # - coverage html -d $CIRCLE_ARTIFACTS
 
 ## Customize deployment commands
 deployment:
