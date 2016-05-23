@@ -27,6 +27,7 @@ machine:
 dependencies:
   pre:
     - sudo apt-get install libpq-dev python-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev
+    - pip install -r app/requirements.txt
 
 #  override:
 #    - bundle install: # note ':' here
@@ -48,7 +49,8 @@ dependencies:
 ## Customize test commands
 test:
   override:
-    - coverage run py.test
+    - py.test --cov=wallet --cov-report=term --cov-report=html
+    # - coverage run py.test
   post:
     - coverage html -d $CIRCLE_ARTIFACTS
 
