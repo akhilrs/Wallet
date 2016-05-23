@@ -13,9 +13,6 @@ DATABASES = {
     }
 }
 # mongodb connection
-from mongoengine import connect
-connect('wallet')
-
 MONGODB_DATABASES = {
     "default": {
         "name": os.environ.get('MASTER_DB'),

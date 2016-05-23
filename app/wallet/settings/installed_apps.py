@@ -12,6 +12,7 @@ DJANGO_APPS = (
 THIRD_PARTY_APPS = (
     'mongonaut',
     'channels',
+    'django_mongoengine',
 )
 
 LOCAL_APPS = (
