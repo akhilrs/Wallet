@@ -12,6 +12,10 @@ DJANGO_APPS = (
 THIRD_PARTY_APPS = (
     'mongonaut',
     'channels',
+    'django_extensions',
+    'rest_framework',
+    'rest_framework.authtoken',
+
 )
 
 LOCAL_APPS = (
