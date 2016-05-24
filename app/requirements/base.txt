@@ -1,10 +1,12 @@
-# django~=1.9.6
+# django>=1.9.6
 django==1.8.12
-psycopg2~=2.6.1
+psycopg2>=2.6.1
 djangotoolbox==1.8.0
 django-mongodb-engine==0.6.0
 python-dotenv==0.5.0
-mongoengine~=0.10.6
+mongoengine>=0.10.6
 django-mongonaut==0.2.21
-channels~=0.13.1
-haikunator~=1.0.1
+channels>=0.13.1
+haikunator>=1.0.1
+django-replicated==2.0
+-e git://github.com/MongoEngine/django-mongoengine#egg=django-mongoengine
