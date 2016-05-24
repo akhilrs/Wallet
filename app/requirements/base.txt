@@ -8,7 +8,6 @@ mongoengine>=0.10.6
 django-mongonaut==0.2.21
 channels>=0.13.1
 haikunator>=1.0.1
-#django-replicated==2.0
--e git://github.com/yandex/django_replicated@6a1c19380ecdc1776c3022690457e60cd92752f5#egg=django-replicated
+django-replicated==2.0
 -e git://github.com/MongoEngine/django-mongoengine#egg=django-mongoengine
 
