@@ -1,6 +1,6 @@
 import random
 
-class PrimaryReplicaRouter(object):
+class DefaultReplicaRouter(object):
     def db_for_read(self, model, **hints):
         """
         Reads go to a randomly-chosen replica.
@@ -11,14 +11,15 @@ class PrimaryReplicaRouter(object):
         """
         Writes always go to primary.
         """
-        return 'primary'
+        return 'default'
 
     def allow_relation(self, obj1, obj2, **hints):
         """
         Relations between objects are allowed if both objects are
         in the primary/replica pool.
         """
-        db_list = ('primary', 'replica1', 'replica2')
+        db_list = ('default', 'replica1', 'replica2')
+
         if obj1._state.db in db_list and obj2._state.db in db_list:
             return True
         return None

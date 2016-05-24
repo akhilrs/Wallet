@@ -1,7 +1,7 @@
 import os
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-DATABASE_ROUTERS = ['wallet.chat.db_router.ChatDBRouter', 'wallet.core.replica_router.PrimaryReplicaRouter']
+DATABASE_ROUTERS = ['wallet.chat.db_router.ChatDBRouter', 'wallet.core.replica_router.DefaultReplicaRouter']
 
 DATABASES = {
     'default': {},
@@ -38,6 +38,7 @@ DATABASES = {
         'PORT': os.environ.get('CHAT_DB_PORT')
     },
 }
+
 # mongodb connection
 MONGODB_DATABASES = {
     "default": {
