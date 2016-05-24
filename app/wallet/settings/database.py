@@ -1,11 +1,10 @@
 import os
-from django_replicated import *
+from django_replicated.settings import *
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-DATABASE_ROUTERS = ['wallet.chat.db_router.ChatDBRouter', 'wallet.core.replica_router.DefaultReplicaRouter']
+DATABASE_ROUTERS = ['wallet.core.replica_router.DefaultReplicaRouter']
 REPLICATED_DATABASE_SLAVES = ['replica1', 'replica2']
 REPLICATED_DATABASE_DOWNTIME = 20
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
