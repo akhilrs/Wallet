@@ -9,3 +9,4 @@ django-mongonaut==0.2.21
 channels>=0.13.1
 haikunator>=1.0.1
 django-replicated==2.0
+-e git://github.com/MongoEngine/django-mongoengine#egg=django-mongoengine
