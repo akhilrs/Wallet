@@ -3,7 +3,7 @@ from django_replicated.settings import *
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 # DATABASE_ROUTERS = ['wallet.core.replica_router.DefaultReplicaRouter']
-DATABASE_ROUTERS = []
+DATABASE_ROUTERS = ['wallet.chat.db_router.ChatDBRouter']
 REPLICATED_DATABASE_SLAVES = ['replica1', 'replica2']
 REPLICATED_DATABASE_DOWNTIME = 20
 DATABASES = {
