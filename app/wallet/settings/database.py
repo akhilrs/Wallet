@@ -4,8 +4,7 @@ import os
 DATABASE_ROUTERS = ['wallet.chat.db_router.ChatDBRouter', 'wallet.core.replica_router.DefaultReplicaRouter']
 
 DATABASES = {
-    'default': {},
-    'primary': {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.environ.get('MASTER_DB'),
         'USER': os.environ.get('MASTER_DB_USER'),
