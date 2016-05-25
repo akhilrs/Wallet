@@ -28,7 +28,7 @@ SECRET_KEY = 'v^w=i^8^a4@xs6b=3$@ob8nw9t9ksi-p9ca7p*=g@kcc#16+!o'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+APPEND_SLASH = False
 
 
 MIDDLEWARE_CLASSES = [
