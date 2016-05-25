@@ -13,6 +13,9 @@ THIRD_PARTY_APPS = (
     'mongonaut',
     'channels',
     'django_mongoengine',
+    'django_extensions',
+    'rest_framework',
+    'rest_framework.authtoken',
 )
 
 LOCAL_APPS = (
